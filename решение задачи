@@ -1,0 +1,22 @@
+request = int(input("Введите количество билетов: "))
+summa = 0
+tickets = 0
+
+for i in range(request):
+    age = int(input("Введите возраст посетителя: "))
+    if age < 18:
+        print("Билет бесплатный \n")
+        summa += 0
+        tickets += 1
+    elif 18 <= age < 25:
+        print("Стоимость билета составит 990 рублей\n")
+        summa += 990
+        tickets += 1
+    elif age >= 25:
+        print("Стоимость билета составит 1390 рублей\n")
+        summa += 1390
+        tickets += 1
+print("Вы заказали билетов: ", tickets, "\nОбщая стоимость заказа составит: ", summa, "руб.")
+if tickets >= 3:
+    print("Ваша скидка составит 10%")
+    print("Стоимость вашего заказа с учетом скидки: ", summa - summa * 0.1, "руб.")
