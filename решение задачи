@@ -17,6 +17,6 @@ for i in range(request):
         summa += 1390
         tickets += 1
 print("Вы заказали билетов: ", tickets, "\nОбщая стоимость заказа составит: ", summa, "руб.")
-if tickets >= 3:
+if tickets > 3:
     print("Ваша скидка составит 10%")
     print("Стоимость вашего заказа с учетом скидки: ", summa - summa * 0.1, "руб.")
